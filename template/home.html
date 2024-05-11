@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+
+
+<div class="my-profile">
+   
+    <div class="contacting">
+        {% for link in links %}
+    
+        <a href="{{ link.git }}" target="_blank">
+            <img width="45px" height="45px" src="{% static 'images/git.png' %}" alt="">
+        </a>
+       
+        <a href="{{ link.linkedin }}" target="_blank">
+           <img width="45px" height="45px" src="{% static 'images/linkedin.png' %}" alt="">
+        </a>
+        <a href="mailto:{{ link.mail }}" target="_blank">
+            <img width="45px" height="45px" src="{% static 'images/mail.png' %}" alt="">
+        </a>
+        <a href="tel:+91{{ link.phone }}" target="_blank">
+           <img width="45px" height="45px" src="{% static 'images/call.png' %}" alt="">
+        </a>
+       
+    </div>
+   
+    <div class="my_details">
+        <h2 class="heading">JOBIN JOSE</h2>
+           <h3 class="job-title"><span class="python-logo">PYTHON</span> <span class="full-stack">FULL STACK</span> <span class="developer">DEVELOPER</span></h3>
+        <p>
+            {{ link.detail }}
+        </p>
+        <div class="cv-d">
+            <a class="cv" href="{{ link.cv.url }}" target="_blank">
+                RESUME
+            </a>
+        </div>
+        
+    </div>
+    <div class="image_details">
+       <img  src="{{ link.image.url }}" alt="" class="my_image">
+    </div>
+   
+</div>
+
+<div class="about-me" id="about-me">
+    <h3 data-aos="fade-up" data-aos-delay="100">ABOUT ME</h3>
+    <p data-aos="fade-up" data-aos-delay="300">{{ link.about }}</p>
+    <!-- <div class="education">
+        <h3>EDUCATION</h3>
+        <div class="my-qaulify">
+            <ul class="edu-order">
+                <li class="edu-list">BCA - Kerala University</li>
+                <li class="edu-list">Higher Secondary Education - St Antony's HSS Kanjiracode</li>
+                <li class="edu-list">SSLC - Little Flower high School </li>
+            </ul>
+        </div>
+    </div>    -->
+</div>
+  
+
+{% endfor %}  
+
+
+
+<div class="my-skills" id="skills">
+    <h3 class="pt-5" data-aos="fade-up" data-aos-delay="100">MY SKILLS</h3>
+    <div class="skill-image">
+        {% for skill in skill %}
+
+        <div class="skill-title" data-aos="fade-up" data-aos-delay="300">
+            <img width="70px" height="70px" src="{{skill.skill_image.url}}" alt="">
+            <h4>{{skill.skill}}</h4>
+        </div>
+        {% endfor %}
+</div>
+</div>
+
+<div class="my-projects" id="projects">
+    <h3 class="pt-5" data-aos="fade-up" data-aos-delay="100">PROJECTS</h3>
+    <div class="my-cards">
+
+        {% for p  in project %}
+    <div class="inside-projects" data-aos="fade-up" data-aos-delay="300">
+        <h3>{{p.project_name}}</h3>
+        <div class="text m-3">
+            <p>Front-end : {{ p.Front_end }}</p>
+            <p>Back-end  : {{ p.Back_end }}</p>
+            <p>Database  : {{ p.Database }}</p>
+            <p>Framework : {{ p.Framework }}</p>
+        </div>
+        
+        <div class="cv-d mt-auto">
+            <a class="cv" href="{{ p.project_url }}" target="_blank">
+                Github
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+    
+    </div>
+</div>
+
+<div class="contact-us" id="contact">
+    <h3 class="pt-5">CONTACT</h3>
+    <div class="inside-contact">
+        <form method="post" class="my-form">
+            {% csrf_token %}
+        <div class="inside-columns">
+            <input type="text" placeholder="Name" class="my-input" name="name" required>
+            <input type="text" placeholder="Phone number" class="my-input" name="number" required>
+        </div>
+        
+            <input type="email" placeholder="Email" class="my-input" name="info" required>
+    
+            <textarea name="message" placeholder="Message"  rows="10" class="messages" required></textarea>
+        
+        <button class="cv" type="submit">Send</button>
+         
+       
+        </form>
+        
+
+    </div>
+    {% if messages %}
+    {% for i in messages %}
+        <script>
+            alert('{{ i }}');
+        </script>
+    {% endfor %}
+   {% endif %}
+
+</div>
+
+
+
+
+{% endblock %}

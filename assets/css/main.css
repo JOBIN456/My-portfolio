@@ -1,0 +1,383 @@
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif !important;
+    background-image: linear-gradient(200deg, rgba(171, 171, 171,0.05) 0%, rgba(171, 171, 171,0.05) 23%,rgba(90, 90, 90,0.05) 23%, rgba(90, 90, 90,0.05) 48%,rgba(65, 65, 65,0.05) 48%, rgba(65, 65, 65,0.05) 61%,rgba(232, 232, 232,0.05) 61%, rgba(232, 232, 232,0.05) 100%),linear-gradient(126deg, rgba(194, 194, 194,0.05) 0%, rgba(194, 194, 194,0.05) 11%,rgba(127, 127, 127,0.05) 11%, rgba(127, 127, 127,0.05) 33%,rgba(117, 117, 117,0.05) 33%, rgba(117, 117, 117,0.05) 99%,rgba(248, 248, 248,0.05) 99%, rgba(248, 248, 248,0.05) 100%),linear-gradient(144deg, rgba(64, 64, 64,0.05) 0%, rgba(64, 64, 64,0.05) 33%,rgba(211, 211, 211,0.05) 33%, rgba(211, 211, 211,0.05) 50%,rgba(53, 53, 53,0.05) 50%, rgba(53, 53, 53,0.05) 75%,rgba(144, 144, 144,0.05) 75%, rgba(144, 144, 144,0.05) 100%),linear-gradient(329deg, hsl(148,0%,0%),hsl(148,0%,0%));
+
+}
+.myblack_nav{
+    background-color:#000000!important;
+    position: sticky !important;
+    top:0;
+    z-index: 9999;
+}
+
+
+.my-profile{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+}
+@media screen and (max-width:990px)
+{
+    .my-profile{
+        flex-direction: column-reverse;
+    }
+}
+.my-profile  h2{
+    color:white;
+    font-size: clamp(2rem, 1.8028rem + 1.1268vw, 3rem);
+
+}
+
+
+.my-profile  h3{
+    color:white;
+    font-size: clamp(0.9rem, 0.7324rem + 0.9577vw, 1.75rem); 
+}
+.my-profile p{
+    font-size: 1.15rem;
+}
+.my_details{
+    max-width:600px;
+    width:100%;
+    padding: 3rem;
+}
+
+@media screen and (max-width:990px){
+    .my_details{
+        padding:0 2rem 3rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+.my_details p{
+    color: white;
+    text-align: justify;
+    margin-top: 2rem;
+}
+.my_image{
+    max-width: 350px;
+    width: 100%;
+    height: 300px;
+    border-radius: 2rem;}
+
+.image_details{
+    padding:3rem;
+}
+@media screen and (max-width:990px){
+    .image_details{
+        padding:3rem 2rem 0 2rem;
+    }
+}
+
+.cv-d{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cv{
+    background-color: #1d3557;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:1rem;
+    width: 150px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    border:none;
+}
+.cv:hover{
+    width: 150px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    background-color: #000000;
+    border: solid 2px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:1rem;
+}
+.contacting{
+    width: 60px;
+    background-color: #ffffff;
+    position: fixed;
+    top: 20%;
+    left: 1%;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: .65rem;
+    gap:1rem;
+    box-shadow: 1px 1px 10px 2px #8b8686;
+    animation: topup 3s infinite;
+}
+@keyframes topup{
+    0%, 50%, 100% { transform: scale(1, 1); }
+    30%, 80% { transform: scale(0.92, 0.95); }
+    }
+     
+
+@media screen and (max-width:991px){
+    .contacting{
+        top: 50%;
+       
+    }
+}
+@media screen and (max-width:500px){
+    .contacting{
+        width:45px;
+    }
+}
+
+
+.job-title{
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15rem solid rgb(253, 253, 253); 
+    white-space: nowrap; 
+    margin: 0;
+    padding: 0;
+    animation: typing 7s steps(18) infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+    
+}
+
+@media screen and (max-width:991px){
+    .job-title{
+        text-align: center;
+    }
+}
+.python-logo {
+    color: #3a75a6;
+    white-space: nowrap; 
+  }
+  .full-stack {
+    color:#ffdd58;
+    white-space: nowrap; 
+  }
+  .developer {
+    color: #ffffff;
+    white-space: nowrap; 
+  }
+.about-me{
+    padding:4rem 2rem 4rem 2rem; 
+    background-color:#14213d;
+    
+    
+}
+.about-me h3{
+    color:rgb(255, 255, 255);
+    font-size: clamp(2rem, 1.8028rem + 1.1268vw, 3rem);
+    text-align: center;
+    letter-spacing: .45rem;
+
+}
+.about-me p{
+    color:rgb(255, 255, 255);
+    text-align:justify;
+    font-size: 1.15rem;
+    padding:2rem 4rem 2rem 4rem;
+    line-height: 2rem;
+}
+@media screen and (max-width:550px){
+    .about-me p{
+        padding:0;
+    }
+
+}
+.education h3{
+    margin-bottom: 5rem;
+}
+.my-qaulify{
+    border-radius: 2rem;
+    border:solid 2px white;
+    margin:4rem 3rem 4rem 3rem;
+
+
+}
+.edu-order{
+    margin:5%;
+}
+
+@media screen and (max-width:550px){
+    .my-qaulify{
+        margin: 0;
+    }
+    .edu-order{
+        margin:1rem;
+    }
+
+}
+.edu-list{
+    color:white;
+}
+.my-skills{
+    background-color: white;
+}
+.my-skills > h3{
+    font-size: clamp(2rem, 1.8028rem + 1.1268vw, 3rem);
+    text-align: center;
+    padding: 1rem;
+    letter-spacing: .45rem;
+}
+
+.skill-image{
+    display: flex;
+    gap:10rem;
+    justify-content: center;
+    align-items: center;
+    padding:4rem 3rem 4rem 3rem;
+    flex-wrap: wrap;
+}
+.skill-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.45rem;
+    height: 140px;
+    width: 140px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: .45rem;
+    transition: 0.3s ease;
+    
+}
+
+.skill-title:hover{
+    transform: translate(0,-10px)!important;
+}
+.my-projects{
+   
+    background-color: #1d3557;
+    
+    
+}
+.my-cards{
+    padding: 3rem 2rem 3rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:2rem;
+    flex-wrap: wrap;
+}
+.inside-projects{
+    background-color: #000000;
+    color:white;
+    width:350px;
+    height:367px;
+    border-radius:2rem 0 2rem 0;
+    padding: 3rem 2rem 3rem 2rem;
+    transition: 0.3s ease;
+}
+
+.inside-projects:hover{
+    transform: translate(0,-10px)!important;
+    box-shadow: 1px 1px 10px 2px #ffffff !important;
+   
+}
+.my-projects > h3{
+    font-size: clamp(2rem, 1.8028rem + 1.1268vw, 3rem);
+    text-align: center;
+    color:white;
+    padding: 1rem;
+    letter-spacing: .45rem;
+    
+}
+.contact-us{
+    background-image: linear-gradient(200deg, rgba(171, 171, 171,0.05) 0%, rgba(171, 171, 171,0.05) 23%,rgba(90, 90, 90,0.05) 23%, rgba(90, 90, 90,0.05) 48%,rgba(65, 65, 65,0.05) 48%, rgba(65, 65, 65,0.05) 61%,rgba(232, 232, 232,0.05) 61%, rgba(232, 232, 232,0.05) 100%),linear-gradient(126deg, rgba(194, 194, 194,0.05) 0%, rgba(194, 194, 194,0.05) 11%,rgba(127, 127, 127,0.05) 11%, rgba(127, 127, 127,0.05) 33%,rgba(117, 117, 117,0.05) 33%, rgba(117, 117, 117,0.05) 99%,rgba(248, 248, 248,0.05) 99%, rgba(248, 248, 248,0.05) 100%),linear-gradient(144deg, rgba(64, 64, 64,0.05) 0%, rgba(64, 64, 64,0.05) 33%,rgba(211, 211, 211,0.05) 33%, rgba(211, 211, 211,0.05) 50%,rgba(53, 53, 53,0.05) 50%, rgba(53, 53, 53,0.05) 75%,rgba(144, 144, 144,0.05) 75%, rgba(144, 144, 144,0.05) 100%),linear-gradient(329deg, hsl(148,0%,0%),hsl(148,0%,0%));
+}
+.contact-us >h3{
+    font-size: clamp(2rem, 1.8028rem + 1.1268vw, 3rem);
+    text-align: center;
+    color:white;
+    padding: 1rem;
+    letter-spacing: .45rem;
+}
+.inside-contact{
+    padding:3rem;
+}
+.my-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:3rem;
+}
+.inside-columns{
+    width:80%;
+    display: flex;
+    gap:3rem;
+}
+@media screen and (max-width:800px){
+    .inside-columns{
+        width:100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .inside-columns{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.my-input{
+    height:70px;
+    width:50%;
+    background-color: inherit;
+    border-radius: 1rem;
+    border:solid 1px white;
+    color: white;
+    text-align: center;
+}
+@media screen and (max-width:600px){
+    .my-input{
+        width:100%;
+    }
+}
+
+.messages{
+    background-color: inherit;
+    width:50%;
+    border:solid 1px white;
+    color: white;
+    text-align: center;
+    border-radius: 1rem;
+
+}
+@media screen and (max-width:600px){
+    .messages{
+        width:100%;
+    }
+}
+
+
+
+.footer{
+    height: 80px;
+    background-color: #000000;
+    color: white;
+    
+}
+.footer-text{
+    font-size: clamp(0.75rem, 0.6218rem + 0.7324vw, 1.4rem);
+}
