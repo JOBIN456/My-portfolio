@@ -6,9 +6,9 @@
 
 
 <div class="my-profile">
-   
+    {% for link in links %}
     <div class="contacting">
-        {% for link in links %}
+        
     
         <a href="{{ link.git }}" target="_blank">
             <img width="45px" height="45px" src="{% static 'images/git.png' %}" alt="git">
@@ -27,6 +27,7 @@
     </div>
    
     <div class="my_details">
+        
         <h2 class="heading">JOBIN JOSE</h2>
            <h3 class="job-title"><span class="python-logo">PYTHON</span> <span class="full-stack">FULL STACK</span> <span class="developer">DEVELOPER</span></h3>
         <p>
@@ -37,15 +38,17 @@
                 RESUME
             </a>
         </div>
-        
+     
     </div>
+
     <div class="image_details">
        <img  src="{{ link.image.url }}" alt="my_image" class="my_image">
     </div>
-   
+    {% endfor %}
 </div>
 
 <div class="about-me" id="about-me">
+    {% for link in links %}
     <h3 data-aos="fade-up" data-aos-delay="100">ABOUT ME</h3>
     <p data-aos="fade-up" data-aos-delay="300">{{ link.about }}</p>
     <!-- <div class="education">
@@ -57,22 +60,24 @@
                 <li class="edu-list">SSLC - Little Flower high School </li>
             </ul>
         </div>
-    </div>    -->
+    </div>  
+  -->
+  {% endfor %}
 </div>
   
 
-{% endfor %}  
+  
 
 
 
 <div class="my-skills" id="skills">
     <h3 class="pt-5" data-aos="fade-up" data-aos-delay="100">MY SKILLS</h3>
     <div class="skill-image">
-        {% for skill in skill %}
+        {% for skills in skill %}
 
         <div class="skill-title" data-aos="fade-up" data-aos-delay="300">
-            <img width="70px" height="70px" src="{{skill.skill_image.url}}" alt="skill">
-            <h4>{{skill.skill}}</h4>
+            <img width="70px" height="70px" src="{{skills.skill_image.url}}" alt="skill">
+            <h4>{{skills.skill}}</h4>
         </div>
         {% endfor %}
 </div>
