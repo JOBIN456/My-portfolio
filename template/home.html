@@ -11,17 +11,17 @@
         {% for link in links %}
     
         <a href="{{ link.git }}" target="_blank">
-            <img width="45px" height="45px" src="{% static 'images/git.png' %}" alt="">
+            <img width="45px" height="45px" src="{% static 'images/git.png' %}" alt="git">
         </a>
        
         <a href="{{ link.linkedin }}" target="_blank">
-           <img width="45px" height="45px" src="{% static 'images/linkedin.png' %}" alt="">
+           <img width="45px" height="45px" src="{% static 'images/linkedin.png' %}" alt="linkedin">
         </a>
         <a href="mailto:{{ link.mail }}" target="_blank">
-            <img width="45px" height="45px" src="{% static 'images/mail.png' %}" alt="">
+            <img width="45px" height="45px" src="{% static 'images/mail.png' %}" alt="mail">
         </a>
         <a href="tel:+91{{ link.phone }}" target="_blank">
-           <img width="45px" height="45px" src="{% static 'images/call.png' %}" alt="">
+           <img width="45px" height="45px" src="{% static 'images/call.png' %}" alt="phone">
         </a>
        
     </div>
@@ -40,7 +40,7 @@
         
     </div>
     <div class="image_details">
-       <img  src="{{ link.image.url }}" alt="" class="my_image">
+       <img  src="{{ link.image.url }}" alt="my_image" class="my_image">
     </div>
    
 </div>
@@ -71,7 +71,7 @@
         {% for skill in skill %}
 
         <div class="skill-title" data-aos="fade-up" data-aos-delay="300">
-            <img width="70px" height="70px" src="{{skill.skill_image.url}}" alt="">
+            <img width="70px" height="70px" src="{{skill.skill_image.url}}" alt="skill">
             <h4>{{skill.skill}}</h4>
         </div>
         {% endfor %}
