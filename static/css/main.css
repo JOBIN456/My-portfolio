@@ -384,7 +384,7 @@ body{
 
 
 
-#pre-loader{
+/* #pre-loader{
     position:fixed;
     top:0;
     left:0;
@@ -452,4 +452,4 @@ body{
   to {
     transform: rotate(360deg);
   }
-}
+} */
