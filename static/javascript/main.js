@@ -7,9 +7,11 @@
 //         abc.style.backgroundColor='transparent';
 //     }
 // });
-// var loader = document.getElementById("pre-loader");
-// window.addEventListener("load", function() {
-//     loader.style.display = "none";
-// });
+
+
+ var loader = document.getElementById("pre-loader");
+ window.addEventListener("load", function() {
+     loader.style.display = "none";
+ });
 
 
